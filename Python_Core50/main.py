@@ -45,7 +45,7 @@ print(stu1) # 增加了「返回」，所以这里会打印出返回值
 stu1.study('CS')
 """
 
-# """
+"""
 # 三、练习例子 定义一个类描述数字时钟
 import time
 class Clock(object):
@@ -73,4 +73,24 @@ while True:
     print(clock.show())
     time.sleep(1)
     clock.run()
+"""
+
+# """
+# 四、练习例子 定义一个类描述平面上的点，要求提供计算到另一个点距离的方法。
+class Point(object):
+
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+    def distance_to(self,target):
+        dx = self.x - target.x
+        dy = self.y - target.y
+        return (dx * dx + dy * dy) ** 0.5
+    def __str__(self):
+        return f'({self.x},{self.y})'
+
+p1 = Point(3,5)
+p2 = Point(6,9)
+print(p1, p2)
+print(p1.distance_to(p2))
 # """
