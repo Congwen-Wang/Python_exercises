@@ -75,7 +75,7 @@ while True:
     clock.run()
 """
 
-# """
+"""
 # 四、练习例子 定义一个类描述平面上的点，要求提供计算到另一个点距离的方法。
 class Point(object):
 
@@ -93,4 +93,38 @@ p1 = Point(3,5)
 p2 = Point(6,9)
 print(p1, p2)
 print(p1.distance_to(p2))
+"""
+
+# 字典
+"""
+# 一、教学例子（最简单的例子）
+xinhua = {
+    '麓': '山脚下',
+    '路': '道,往来通行的地方;方面,地区:南~货,外~货;种类:他俩是一~人',
+    '蕗': '甘草的别名',
+    '潞': '潞水,水名,即今山⻄省的浊漳河;潞江,水名,即云南省的怒江'
+}
+print(xinhua)
+
+person = {
+    'name': '王大锤',
+    'age': 55,
+    'weight': 60,
+    'office': '科华北路62号',
+    'home': '中同仁路8号',
+    'tel': '13122334455',
+    'econtact': '13800998877'
+}
+print(person)
+"""
+
+# """
+# 二、练习例子
+sentence = input('请输入一句话：')
+counter = {}
+for ch in sentence:
+    if 'A' <= ch <= 'Z' or 'a' <= ch <= 'z':
+        counter[ch] = counter.get(ch, 0) +1
+for key, value in counter.items():
+    print(f'字母{key}出现了{value}次。')
 # """
