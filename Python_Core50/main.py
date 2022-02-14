@@ -118,7 +118,7 @@ person = {
 print(person)
 """
 
-# """
+"""
 # 二、练习例子
 sentence = input('请输入一句话：')
 counter = {}
@@ -127,4 +127,25 @@ for ch in sentence:
         counter[ch] = counter.get(ch, 0) +1
 for key, value in counter.items():
     print(f'字母{key}出现了{value}次。')
+# """
+
+# 正则表达式
+# """
+import re
+username = input('请输入用户名：')
+qq = input('请输入QQ号: ')
+
+m1 = re.match(r'^[0-9a-zA-Z_]{6,20}$', username)
+# match函数的第一个参数是正则表达式字符串或正则表达式对象
+# match函数的第二个参数是要跟正则表达式做匹配的字符串对象
+if not m1:
+    print('请输入有效的用户名.')
+# fullmatch函数要求字符串和正则表达式完全匹配
+# 所以正则表达式没有写起始符和结束符
+m2 = re.fullmatch(r'[1-9]\d{4,11}', qq)
+if not m2:
+    print('请输入有效的QQ号.')
+if m1 and m2:
+    print('你输入的信息是有效的!')
+
 # """
